@@ -357,41 +357,33 @@
     <!--* ========== Header ========== -->
 
     <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="logo-system">
-                <div class="logo-mark">
-                    <img src="Assets/logo.png" alt="" />
-                </div>
-                <div class="logo-type">CashBack</div>
-            </a>
-            <nav class="nav-system" id="mainNav">
-                <ul class="nav-list">
-                    <li class="nav-item dropdown">
-                        <a href="product.html" class="nav-link">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">CashBack</a></li>
-                            <li><a href="#" class="dropdown-item">thatsWE</a></li>
-                            <li><a href="#" class="dropdown-item">topTRIP</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="order.html" class="nav-link">Order</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <div class="cta-system">
-                    <a href="#" class="cta-button">Learn More</a>
-                </div>
-            </nav>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-                </svg>
-            </button>
-        </div>
-    </header>
+      <div class="header__container">
+          <a href="index.html" class="logo-system">
+              <div class="logo-mark">
+                  <img src="Assets/thatsWE.png" alt="">
+              </div>
+              <!-- <div class="logo-type">thatsWE</div> -->
+          </a>
+          <nav class="nav-system" id="mainNav">
+              <ul class="nav-list">
+                  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                  <li class="nav-item dropdown">
+                      <a href="product.html" class="nav-link">Products</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="cashback.html" class="dropdown-item">CashBack</a></li>
+                          <li><a href="thatsWE.html" class="dropdown-item">thatsWE</a></li>
+                          <li><a href="topTrip.html" class="dropdown-item">topTRIP</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item"><a href="order.html" class="nav-link">Order</a></li>
+                  <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              </ul>
+          </nav>
+          <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+      </div>
+  </header>
 
     <!--* ========== Order Section ========== -->
 
@@ -437,11 +429,7 @@
                 <div class="form-group">
                     <h3>Payment Method</h3>
                     <div class="payment-methods">
-                        <div class="payment-method selected" data-method="credit-card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeRD2Sfgl1YjoxaOBx5YGawhkOM3Go-IaDVQ&s" alt="Credit Card" />
-                            <div class="payment-method-name">Credit Card</div>
-                        </div>
-                        <div class="payment-method" data-method="paypal">
+                        <div class="payment-method selected" data-method="paypal">
                             <img src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png" alt="PayPal"/>
                             <div class="payment-method-name">PayPal</div>
                         </div>
@@ -451,27 +439,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group" id="creditCardForm">
-                    <div class="form-group">
-                        <label class="form-label">Card Number</label>
-                        <input type="text" class="form-control" placeholder="1234 5678 9012 3456"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Cardholder Name</label>
-                        <input type="text" class="form-control" placeholder="John Doe" />
-                    </div>
-                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem" >
-                        <div>
-                            <label class="form-label">Expiry Date</label>
-                            <input type="text" class="form-control" placeholder="MM/YY" />
-                        </div>
-                        <div>
-                            <label class="form-label">CVV</label>
-                            <input type="text" class="form-control" placeholder="123" />
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group" id="paypalForm" style="display: none; text-align: center" >
+                <div class="form-group" id="paypalForm" style="text-align: center" >
                     <p>You will be redirected to PayPal to complete your payment</p>
                     <img src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png" alt="PayPal" style="height: 50px; margin: 1rem 0"/>
                 </div>

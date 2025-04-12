@@ -48,7 +48,6 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         const paymentMethods = document.querySelectorAll('.payment-method');
-        const creditCardForm = document.getElementById('creditCardForm');
         const paypalForm = document.getElementById('paypalForm');
         const bankTransferForm = document.getElementById('bankTransferForm');
             paymentMethods.forEach(method => {
@@ -56,7 +55,6 @@
                 paymentMethods.forEach(m => m.classList.remove('selected'));
                 this.classList.add('selected');
                 const methodType = this.dataset.method;
-                creditCardForm.style.display = 'none';
                 paypalForm.style.display = 'none';
                 bankTransferForm.style.display = 'none';
                 if (methodType === 'credit-card') {

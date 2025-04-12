@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>thatsWE Product Page</title>
+</head>
+<body>
+
+    <!--* ========== Header ========== -->
+
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo-system">
+                <div class="logo-mark">
+                    <img src="Assets/thatsWE.png" alt="">
+                </div>
+                <!-- <div class="logo-type">thatsWE</div> -->
+            </a>
+            <nav class="nav-system" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="product.html" class="nav-link">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cashback.html" class="dropdown-item">CashBack</a></li>
+                            <li><a href="thatsWE.html" class="dropdown-item">thatsWE</a></li>
+                            <li><a href="topTrip.html" class="dropdown-item">topTRIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="order.html" class="nav-link">Order</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="thatsWEPage">
+        <div class="thatsWEHeader">
+            <h1>topTRIP</h1>
+            <p>More value for your customers. Less effort for you.</p>
+        </div>
+        <div class="thatsWEImages">
+            <img src="Assets/image.jpg" alt="Product Image">
+            <img src="Assets/image.jpg" alt="Product Image">
+        </div>
+        <div class="thatsWEFeatures">
+            <h2>Key Benefits:</h2>
+            <ul>
+                <li>Strengthen customer relationships</li>
+                <li>Unique access codes for each customer</li>
+                <li>Completely free for your business</li>
+                <li>Professional presentation of your brand</li>
+                <li>24/7 customer support included</li>
+            </ul>
+        </div>
+        <div class="thatsWEContactForm">
+            <h2>Interested? Request a non-binding access code now</h2>
+            <form>
+                <div class="form-group">
+                    <label for="company">Travel Agency Name</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Request access code</button>
+            </form>
+        </div>
+    </section>
+
+    <!--* ========== Footer Section ========== -->
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-heading">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-envelope footer-icon"></i>
+                        <a href="mailto:info@thatswe.de">info@thatswe.de</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone footer-icon"></i>
+                        <a href="tel:+49123456789">+49 123 456 789</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot footer-icon"></i>
+                        <span>Musterstraße 123, 10115 Berlin</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Imprint</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">Follow Us</h3>
+                <div class="social-media">
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin social-icon"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter social-icon"></i>          
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram social-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 thatsWE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
