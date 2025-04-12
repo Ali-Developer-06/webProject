@@ -371,7 +371,7 @@ img{
 /** Product section styling */
 @media (max-width: 768px){
   .productSection{
-    padding: 150px 20px;
+    padding: 150px 20px 0;
   }
   .company-name{
     font-size: 2rem;
@@ -821,9 +821,6 @@ img{
 
 /** Product Page Responsive Styling */
 @media (max-width: 1024px){
-  .productPage{
-    padding: 100px 20px;
-  }
   .product-header,
   .details-grid{
     grid-template-columns: 1fr;
@@ -1466,6 +1463,9 @@ h2{
 }
 
 @media (max-width:768px){
+  .thatsWEPage{
+    padding: 150px 15px 0;
+  }
   .thatsWEImages{
     flex-direction: column;
   }
