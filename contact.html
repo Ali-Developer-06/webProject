@@ -3,192 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="style.css">
     <title>Contact Us | thatsWE</title>
-    <style>
-        .contactContainer{
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-            padding: 100px 40px;
-        }
-        .contact-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .contact-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .contact-header p {
-            color: var(--color-neutral-400);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Contact Grid */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        /* Contact Info Card */
-        .contact-card {
-            background: var(--color-neutral-100);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(67, 97, 238, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--color-primary-500);
-        }
-        
-        .contact-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--color-primary-600);
-        }
-        
-        .contact-card p, .contact-card a {
-            color: var(--color-neutral-400);
-            margin-bottom: 0.5rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-card a:hover {
-            color: var(--color-primary-500);
-        }
-        
-        /* Contact Form */
-        .contact-form-container {
-            background: var(--color-neutral-100);
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .form-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--color-primary-600);
-        }
-        
-        .contact-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--color-neutral-400);
-            border-radius: 8px;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-        
-        .form-control:focus {
-            border-color: var(--color-primary-500);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* Submit Button */
-        .btn {
-            display: inline-block;
-            padding: 0.9rem 2rem;
-            background: var(--color-primary-500);
-            color: var(--color-neutral-100);
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .btn:hover {
-            background: var(--color-primary-600);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
-        }
-        
-        /* Map Section */
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            height: 400px;
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .contact-header h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-form {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!--* ========== Header ========== -->
@@ -207,12 +24,11 @@
                     <li class="nav-item dropdown">
                         <a href="product.html" class="nav-link">Products</a>
                         <ul class="dropdown-menu">
-                            <li><a href="cashback.html" class="dropdown-item">CashBack</a></li>
                             <li><a href="thatsWE.html" class="dropdown-item">thatsWE</a></li>
                             <li><a href="topTrip.html" class="dropdown-item">topTRIP</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="order.html" class="nav-link">Order</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>

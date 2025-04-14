@@ -1,285 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
-  <link rel="stylesheet" href="style.css">
-  <title>AppShowcase | Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Details | Buyer's Platform</title>
 </head>
 <body>
+
     <!--* ========== Header ========== -->
 
     <header class="header">
-      <div class="header__container">
-          <a href="index.html" class="logo-system">
-              <div class="logo-mark">
-                  <img src="Assets/thatsWE.png" alt="">
-              </div>
-              <!-- <div class="logo-type">thatsWE</div> -->
-          </a>
-          <nav class="nav-system" id="mainNav">
-              <ul class="nav-list">
-                  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                  <li class="nav-item dropdown">
-                      <a href="product.html" class="nav-link">Products</a>
-                      <ul class="dropdown-menu">
-                          <li><a href="cashback.html" class="dropdown-item">CashBack</a></li>
-                          <li><a href="thatsWE.html" class="dropdown-item">thatsWE</a></li>
-                          <li><a href="topTrip.html" class="dropdown-item">topTRIP</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item"><a href="order.html" class="nav-link">Order</a></li>
-                  <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-              </ul>
-          </nav>
-          <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-      </div>
-  </header>
-
-    <!--* ========== Product Detail ========== -->
-
-    <section class="productPage">
-      <div class="product-hero">
-        <div class="container">
-            <div class="product-header">
-                <div class="product-gallery">
-                    <div class="main-image">
-                        <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="TaskMaster Pro Screenshot">
-                    </div>
-                    <div class="thumbnail-grid">
-                        <div class="thumbnail">
-                            <img src="https://cdn.pixabay.com/photo/2021/12/12/20/00/play-6865967_640.jpg" alt="TaskMaster Thumbnail 1">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="https://cdn.pixabay.com/photo/2015/03/17/02/01/cubes-677092_1280.png" alt="TaskMaster Thumbnail 2">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg" alt="TaskMaster Thumbnail 3">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Random_pyramids.jpg" alt="TaskMaster Thumbnail 4">
-                        </div>
-                    </div>
+        <div class="header__container">
+            <a href="index.html" class="logo-system">
+                <div class="logo-mark">
+                    <img src="Assets/thatsWE.png" alt="">
                 </div>
-                <div class="product-info">
-                    <span class="product-badge">Bestseller</span>
-                    <h1 class="product-title">TaskMaster Pro</h1>
-                    <p class="product-subtitle">The ultimate task management solution for teams</p>
-                    <div class="product-rating">
-                        <div class="stars">★★★★★</div>
-                        <span class="review-count">(142 reviews)</span>
-                    </div>
-                    <p class="product-description">
-                        TaskMaster Pro revolutionizes your workflow with intelligent solutions. 
-                        Our AI-powered task manager automatically prioritizes your tasks, 
-                        optimizes team collaboration, and boosts productivity by up to 40%.
-                    </p>
-                    <div class="price-container">
-                        <span class="current-price">$9.99</span>
-                        <span class="original-price">$14.99</span>
-                        <span class="discount-badge">33% off</span>
-                    </div>
-                    <div class="cta-buttons">
-                        <a href="order.html" class="btn btn-primary">Buy Now</a>
-                    </div>
-                    <div class="platform-badges">
-                        <div class="platform-badge">
-                          <i class="fa-brands fa-apple"></i> iOS
-                        </div>
-                        <div class="platform-badge">
-                          <i class="fa-brands fa-android"></i> Android
-                        </div>
-                        <div class="platform-badge">
-                          <i class="fa-solid fa-globe"></i> Web
+                <!-- <div class="logo-type">thatsWE</div> -->
+            </a>
+            <nav class="nav-system" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="product.html" class="nav-link">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cashback.html" class="dropdown-item">CashBack</a></li>
+                            <li><a href="topTrip.html" class="dropdown-item">topTRIP</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <section class="productSection">
+        <div class="products-grid">
+            <div class="product-card">
+                <a href="cashback.html">
+                    <img src="Assets/logo.png" alt="CashBack Logo" class="product-logo">
+                </a>
+                <div class="product-name">CashBack</div>
+                <div class="product-description">Lassen Sie sich überzahlte Zuzahlungen von Ihrer Krankenkasse erstatten.</div>
+                <a href="cashback.html" class="view-button">Mehr erfahren</a>
+            </div>
+            <div class="product-card">
+                <a href="topTrip.html">
+                    <img src="Assets/topTrip.png" alt="Product 2 Logo" class="product-logo">
+                </a>
+                <div class="product-name">topTRIP</div>
+                <div class="product-description">Nutzen Sie den digitalen Urlaubsbegleiter mit etlichen Spezial-Modulen.</div>
+                <a href="topTrip.html" class="view-button">Mehr erfahren</a>
+            </div>
+            <div class="product-card">
+                <a href="#">
+                    <img src="Assets/topTrip.png" alt="Product 3 Logo" class="product-logo">
+                </a>
+                <div class="product-name">IdeaApp2</div>
+                <div class="product-description">Nutzen Sie den digitalen Urlaubsbegleiter mit etlichen Spezial-Modulen.</div>
+                <a href="#" class="view-button">Mehr erfahren</a>
+            </div>
+        </div>
+        <div class="innerProductSection">
+            <div class="pricing-section">
+                <div class="container">
+                    <div class="pricing-section">
+                        <div class="container">
+                            <h2 class="section-title">License Options</h2>
+                            <div class="pricing-grid">
+                                <div class="pricing-card">
+                                    <h3 class="pricing-title">Starter Set</h3>
+                                    <div class="pricing-price">Free</div>
+                                    <span class="pricing-period">per month</span>
+                                    <ul class="pricing-features">
+                                        <li>Up to 3 projects</li>
+                                        <li>2 team members</li>
+                                        <li>Basic reports</li>
+                                        <li>Email support</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                                </div>
+                                <div class="pricing-card popular">
+                                    <div class="popular-badge">Recommended</div>
+                                    <h3 class="pricing-title">Pro</h3>
+                                    <div class="pricing-price">€ 77.99</div>
+                                    <span class="pricing-period">per month</span>
+                                    <ul class="pricing-features">
+                                        <li>Unlimited projects</li>
+                                        <li>10 team members</li>
+                                        <li>Advanced reports</li>
+                                        <li>Priority support</li>
+                                        <li>API access</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                                </div>
+                                <div class="pricing-card">
+                                    <h3 class="pricing-title">Enterprise</h3>
+                                    <div class="pricing-price">€77.99</div>
+                                    <span class="pricing-period">per month</span>
+                                    <ul class="pricing-features">
+                                        <li>Unlimited projects</li>
+                                        <li>Unlimited members</li>
+                                        <li>Premium support</li>
+                                        <li>Dedicated account manager</li>
+                                        <li>Onboarding service</li>
+                                        <li>Custom integrations</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
-      <div class="product-details">
-        <div class="container">
-            <div class="details-grid">
-                <div class="features-section">
-                    <h2>Key Features</h2>
-                    <ul class="feature-list">
-                        <li class="feature-item">
-                          <i class="fa-solid fa-check feature-icon"></i>
-                            <div class="feature-content">
-                                <h3>Smart Task Prioritization</h3>
-                                <p>Our AI analyzes your work patterns and automatically prioritizes tasks by urgency and importance.</p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                          <i class="fa-solid fa-check feature-icon"></i>
-                            <div class="feature-content">
-                                <h3>Real-Time Team Collaboration</h3>
-                                <p>Work seamlessly with your team with live updates and integrated chat.</p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                          <i class="fa-solid fa-check feature-icon"></i>
-                            <div class="feature-content">
-                                <h3>Performance Analytics</h3>
-                                <p>Detailed reports and analytics help identify productivity bottlenecks.</p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                          <i class="fa-solid fa-check feature-icon"></i>
-                            <div class="feature-content">
-                                <h3>Integrations</h3>
-                                <p>Seamless integration with Google Calendar, Slack, Microsoft Teams and more.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="video-demo">
-                        <h2>See TaskMaster Pro in Action</h2>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+            <div class="section-container">
+                <h2 class="section-title">Download Options</h2>
+                <div class="download-option">
+                    <div class="store-icon">C</div>
+                    <div class="store-info">
+                        <h3>CashBack 24</h3>
+                        <p>Download CashBack 24 in 9 languages from the Apple or Play Store and enter your code.</p>
                     </div>
                 </div>
-                <div class="specs-section">
-                    <h2>Technical Specifications</h2>
-                    <ul class="specs-list">
-                        <li class="spec-item">
-                            <span class="spec-name">Version</span>
-                            <span class="spec-value">2.4.1</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">Release Date</span>
-                            <span class="spec-value">March 15, 2024</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">File Size</span>
-                            <span class="spec-value">45.7 MB</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">OS Requirements</span>
-                            <span class="spec-value">iOS 14+, Android 10+</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">Languages</span>
-                            <span class="spec-value">English, German</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">Age Rating</span>
-                            <span class="spec-value">4+</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">Developer</span>
-                            <span class="spec-value">thatsWE UG</span>
-                        </li>
-                        <li class="spec-item">
-                            <span class="spec-name">Copyright</span>
-                            <span class="spec-value">© 2024 thatsWE</span>
-                        </li>
-                    </ul>
+                <div class="download-option">
+                    <div class="store-icon">T</div>
+                    <div class="store-info">
+                        <h3>topTRIP</h3>
+                        <p>Download topTRIP in 9 languages from the Apple or Play Store and enter your code.</p>
+                    </div>
+                </div>
+                <div class="download-option">
+                    <div class="store-icon">I</div>
+                    <div class="store-info">
+                        <h3>Idea App2</h3>
+                        <p>Download IdeaApp2 in 9 languages from the Apple or Play Store and enter your code.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-      </div>
-      <div class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">License Options</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Basic</h3>
-                    <div class="pricing-price">$9.99</div>
-                    <span class="pricing-period">per month</span>
-                    <ul class="pricing-features">
-                        <li>Up to 3 projects</li>
-                        <li>2 team members</li>
-                        <li>Basic reports</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
-                </div>
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Recommended</div>
-                    <h3 class="pricing-title">Pro</h3>
-                    <div class="pricing-price">$19.99</div>
-                    <span class="pricing-period">per month</span>
-                    <ul class="pricing-features">
-                        <li>Unlimited projects</li>
-                        <li>10 team members</li>
-                        <li>Advanced reports</li>
-                        <li>Priority support</li>
-                        <li>API access</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Enterprise</h3>
-                    <div class="pricing-price">$49.99</div>
-                    <span class="pricing-period">per month</span>
-                    <ul class="pricing-features">
-                        <li>Unlimited projects</li>
-                        <li>Unlimited members</li>
-                        <li>Premium support</li>
-                        <li>Dedicated account manager</li>
-                        <li>Onboarding service</li>
-                        <li>Custom integrations</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
-                </div>
+            <div class="cta-container">
+                <button class="cta-button">Get Started Today</button>
             </div>
         </div>
-      </div>
     </section>
 
-  <!--* ========== Footer Section ========== -->
+    <!--* ========== Footer Section ========== -->
 
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3 class="footer-heading">Contact</h3>
-        <ul class="footer-contact">
-          <li>
-            <i class="fa-solid fa-envelope footer-icon"></i>
-            <a href="mailto:info@thatswe.de">info@thatswe.de</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-phone footer-icon"></i>
-            <a href="tel:+49123456789">+49 123 456 789</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-location-dot footer-icon"></i>
-            <span>Musterstraße 123, 10115 Berlin</span>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3 class="footer-heading">Useful Links</h3>
-        <ul class="footer-links">
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Imprint</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3 class="footer-heading">Follow Us</h3>
-        <div class="social-media">
-          <a href="#" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin social-icon"></i>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <i class="fa-brands fa-x-twitter social-icon"></i>          
-          </a>
-          <a href="#" aria-label="Instagram">
-            <i class="fa-brands fa-instagram social-icon"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 thatsWE UG (haftungsbeschränkt). Alle Rechte vorbehalten.</p>
-    </div>
-  </footer>
+    <footer>
+        <p>&copy; 2025 thatsWE UG - Wegner |
+            <a href="impressum.html">Impressum</a> |
+            <a href="datenschutz.html">Datenschutz</a> |
+            <a href="agb.html">AGB</a>
+        </p>
+        <p>Kontakt: wbsoft@web.de | Tel: +49 176 5586 1387</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
