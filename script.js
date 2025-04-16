@@ -30,7 +30,6 @@
     
     function generatePdf(event, appName) {
         event.preventDefault();
-        
         const form = event.target;
         const formData = {
             name: form.querySelector('[name="name"]').value,

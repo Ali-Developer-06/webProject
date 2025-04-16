@@ -1330,3 +1330,21 @@ h2{
 .formGroup p:last-child{
   font-size: 11px;
 }
+
+@media (max-width:768px){
+  .pdfFormData{
+    padding: 10px;
+  }
+  .pdfContent .formGroup{
+    width: 100%;
+  }
+  .pdfContent .formGroup p:nth-child(1){
+    width: 30%;
+  }
+  .pdfContent .formGroup p:nth-child(2){
+    width: 40%;
+  }
+  br{
+    display: none;
+  }
+}
