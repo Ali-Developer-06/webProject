@@ -547,6 +547,7 @@ footer a:hover{
 }
 .cta-button:hover{
   transform: translateY(-2px);
+  color: var(--color-neutral-100);
   background-color: var(--color-primary-500);
   box-shadow: 0 6px 16px rgba(67, 97, 238, 0.3);
 }
@@ -1194,9 +1195,7 @@ h2{
   gap: 40px;
   display: flex;
 }
-.licenceFormPlusContent .contact-form{
-  width: 50%;
-}
+.licenceFormPlusContent .contact-form,
 .licenceFormPlusContent .licence-Content{
   width: 50%;
 }
@@ -1241,9 +1240,6 @@ h2{
 }
 
 @media (max-width:768px){
-  .licenceForm{
-    width: 90%;
-  }
   .thatsWEPage{
     padding: 150px 15px 0;
   }
@@ -1251,6 +1247,13 @@ h2{
     flex-direction: column;
   }
   .thatsWEImages img{
+    width: 100%;
+  }
+  .licenceFormPlusContent{
+    flex-direction: column-reverse;
+  }
+  .licenceFormPlusContent .contact-form,
+  .licenceFormPlusContent .licence-Content{
     width: 100%;
   }
 }
@@ -1283,27 +1286,34 @@ h2{
   justify-content: center;
 }
 .pdfHeadingPlusImg img{
-  width: 100px;
+  width: 50px;
 }
 .pdfFormData{
   padding: 5px 50px;
 }
 .pdfContent .formGroups{
   width: 100%;
-  display: flex;
 }
 .pdfContent .formGroup{
   width: 50%;
   display: flex;
-  padding: 10px 0;
+  padding: 5px 0;
+}
+.pdfContent .formGroup p{
+  font-size: 10px;
+  text-align: left;
+}
+.pdfContent .formGroup p:nth-child(1){
+  width: 30%;
+  font-size: 14px;
+  font-weight: bold;
 }
 .pdfContent .formGroup p:nth-child(2){
-  width: 50%;
-  margin-left: 10px;
+  width: 100%;
   border-bottom: 2px solid #000000;
 }
 .pdfContent .licenceAgreementContent p{
-  font-size: 11px;
+  font-size: 10px;
 }
 .pdfContent .licenceAgreementContent{
   text-align: left;

@@ -28,19 +28,23 @@
 
     //* licence plus PDF script
     
-    document.getElementById('licenseForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Get form data
+    function generatePdf(event, appName) {
+        event.preventDefault();
+        
+        const form = event.target;
         const formData = {
-            name: document.getElementById('name').value,
-            owner: document.getElementById('owner').value,
-            street: document.getElementById('street').value,
-            postal: document.getElementById('postal').value,
-            telephone: document.getElementById('telephone').value,
-            email: document.getElementById('email').value,
-            website: document.getElementById('website').value
+            name: form.querySelector('[name="name"]').value,
+            owner: form.querySelector('[name="owner"]').value,
+            street: form.querySelector('[name="street"]').value,
+            postal: form.querySelector('[name="postal"]').value,
+            telephone: form.querySelector('[name="telephone"]').value,
+            email: form.querySelector('[name="email"]').value,
+            website: form.querySelector('[name="website"]')?.value || '',
+            message: form.querySelector('[name="message"]')?.value || '',
+            app: appName
         };
-        // Open PDF generator in new tab with form data as URL parameters
+        
+        // Open PDF template with form data as URL parameters
         const queryString = new URLSearchParams(formData).toString();
         window.open(`pdf.html?${queryString}`, '_blank');
-    });
+    }

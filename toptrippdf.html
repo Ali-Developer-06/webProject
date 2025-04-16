@@ -10,14 +10,14 @@
 <body>
     <div class="pdfContent">
         <div class="pdfHeadingPlusImg">
-            <img src="Assets/thatsWE.png" alt="Company Logo">
-            <h1>thatsWE UG - Wegner</h1>
+            <img src="Assets/topTrip.png" alt="Company Logo">
+            <h1>topTrip - Wegner</h1>
         </div>
         <div class="pdfLine"></div>
         <div class="pdfFormData">
             <div class="formGroups">
                 <div class="formGroup">
-                    <p>Name:</p>
+                    <p>Firmenname:</p>
                     <p id="namePDF"></p>
                 </div>
                 <div class="formGroup">
@@ -44,38 +44,42 @@
                     <p>eMail:</p>
                     <p id="emailPDF"></p>
                 </div>
+                <div class="formGroup">
+                    <p>www:</p>
+                    <p id="wwwPDF"></p>
+                </div>
             </div>
         </div>
         <p>nachfolgend „Lizenznehmer" genannt,</p>
         <div class="licenceAgreementContent">
-            <p>Datenschutzerklärung für die App „cashback“</p>
+            <p>Datenschutzerklärung für die App „topTRIP“</p>
             <p>Stand: 10. Januar 2025</p>
             <p>Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. Nachfolgend informieren wir Sie über die wichtigsten Punkte zur Verarbeitung Ihrer Daten in der App.</p>
-            <p>1. Verantwortlicher</p>
+            <h5>1. Verantwortlicher</h5>
             <p>ThatsWE UG - Wegner, Bockhorner Weg 90, 28779 Bremen, wbsoft@web.de</p>
-            <p>2. Zweck der Datenverarbeitung</p>
+            <h5>2. Zweck der Datenverarbeitung</h5>
             <p>Die App verarbeitet Ihre Daten ausschließlich lokal auf Ihrem Gerät, um:</p>
             <li>eventuelle Überzahlungen im Medikamentenbezug zu berechnen,</li>
             <li>Ihre voraussichtliche Anspruchsberechtigung gegenüber Ihrer gesetzlichen Krankenversicherung zu dokumentieren.</li>
             <p>Es erfolgt keine automatische Weiterleitung Ihrer Daten an Dritte.</p>
-            <p>3. Weitergabe von Daten</p>
+            <h5>3. Weitergabe von Daten</h5>
             <p>Ihre Daten werden nur weitergegeben, wenn:</p>
             <li>Sie diese aktiv und bewusst teilen (z. B. durch Export oder Weiterleitung),</li>
             <li>dies gesetzlich vorgeschrieben ist (z. B. bei behördlichen Anfragen).</li>
-            <p>4. Datenspeicherung und -sicherheit</p>
+            <h5>4. Datenspeicherung und -sicherheit</h5>
             <li>Alle Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert.</li>
             <li>Es werden keine Daten auf externen Servern gespeichert oder verarbeitet.</li>
             <li>Der Zugriff auf Ihre Daten erfolgt ausschließlich durch Sie.</li>
-            <p>5. Ihre Rechte</p>
+            <h5>5. Ihre Rechte</h5>
             <p>Sie haben das Recht auf:</p>
             <li>Auskunft über die von der App verarbeiteten Daten,</li>
             <li>Berichtigung oder Löschung Ihrer Daten,</li>
             <li>Berichtigung oder Löschung Ihrer Daten,</li>
             <p>Da die Daten lokal gespeichert werden, können diese Rechte direkt von Ihnen durch die App-Funktionen ausgeübt werden.</p>
-            <p>6. Änderungen der Datenschutzerklärung</p>
+            <h5>6. Änderungen der Datenschutzerklärung</h5>
             <p>Sollte sich der Funktionsumfang der App ändern, passen wir diese Datenschutzerklärung entsprechend an. Die aktuelle Version ist jederzeit in der App einsehbar.</p>
             <p>Kontakt</p>
-            <p>Bei Fragen oder Anliegen zum Datenschutz kontaktieren Sie uns: <br> ThatsWE UG - Wegner, Bockhorner Weg 90, 28779 Bremen, wbsoft@web.de</p>
+            <p>Bei Fragen oder Anliegen zum Datenschutz kontaktieren Sie uns: <br> ThatsWE UG - Wegner, Bockhorner Weg 90, 28779 Bremen, wbsoft@web.de</p> <br>
             <p>Impressum:</p>
             <p>thatsWE UG Wegner</p>
             <p>Bockhorner Weg 90</p>
@@ -89,24 +93,23 @@
     <script>
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
-            
-            // Populate PDF with form data
             document.getElementById('namePDF').textContent = urlParams.get('name') || '';
             document.getElementById('ownerPDF').textContent = urlParams.get('owner') || '';
             document.getElementById('streetPDF').textContent = urlParams.get('street') || '';
             document.getElementById('postalPDF').textContent = urlParams.get('postal') || '';
             document.getElementById('telephonePDF').textContent = urlParams.get('telephone') || '';
             document.getElementById('emailPDF').textContent = urlParams.get('email') || '';
-            
-            // Generate PDF automatically
+            document.getElementById('wwwPDF').textContent = urlParams.get('website') || '';
+
+            const appName = urlParams.get('app') || 'license';
+            const filename = `${appName}_agreement.pdf`;
             const element = document.querySelector('.pdfContent');
             const opt = {
                 margin: 10,
-                filename: 'license_agreement.pdf',
+                filename: filename,
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
-            
             html2pdf().set(opt).from(element).save();
         };
     </script>
