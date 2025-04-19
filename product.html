@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Product Details | Buyer's Platform</title>
 </head>
@@ -66,55 +67,27 @@
             </div> -->
         </div>
         <div class="innerProductSection">
-            <div class="pricing-section">
-                <div class="container">
-                    <div class="pricing-section">
-                        <div class="container">
-                            <h2 class="section-title">License Options</h2>
-                            <div class="pricing-grid">
-                                <div class="pricing-card">
-                                    <h3 class="pricing-title">Starter Set</h3>
-                                    <div class="pricing-price">Free</div>
-                                    <span class="pricing-period">per month</span>
-                                    <ul class="pricing-features">
-                                        <li>Up to 3 projects</li>
-                                        <li>2 team members</li>
-                                        <li>Basic reports</li>
-                                        <li>Email support</li>
-                                    </ul>
-                                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
-                                </div>
-                                <div class="pricing-card popular">
-                                    <div class="popular-badge">Recommended</div>
-                                    <h3 class="pricing-title">Pro</h3>
-                                    <div class="pricing-price">€ 77.99</div>
-                                    <span class="pricing-period">per month</span>
-                                    <ul class="pricing-features">
-                                        <li>Unlimited projects</li>
-                                        <li>10 team members</li>
-                                        <li>Advanced reports</li>
-                                        <li>Priority support</li>
-                                        <li>API access</li>
-                                    </ul>
-                                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                                </div>
-                                <div class="pricing-card">
-                                    <h3 class="pricing-title">Enterprise</h3>
-                                    <div class="pricing-price">€77.99</div>
-                                    <span class="pricing-period">per month</span>
-                                    <ul class="pricing-features">
-                                        <li>Unlimited projects</li>
-                                        <li>Unlimited members</li>
-                                        <li>Premium support</li>
-                                        <li>Dedicated account manager</li>
-                                        <li>Onboarding service</li>
-                                        <li>Custom integrations</li>
-                                    </ul>
-                                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
-                                </div>
-                            </div>
+            <div class="imgCarousel">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="Assets/img1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Assets/img2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Assets/img3.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Assets/img4.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Assets/img5.jpg" alt="">
                         </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
             <div class="section-container">
@@ -130,7 +103,7 @@
                     <div class="store-icon">T</div>
                     <div class="store-info">
                         <h3>topTRIP</h3>
-                        <p>Download topTRIP in 9 languages from the Apple or Play Store and enter your code.</p>
+                        <p>Laden Sie topTRIP in 9 Sprachen aus dem Apple oder Google Play Store herunter und geben Sie Ihren Code ein.</p>
                     </div>
                 </div>
                 <!-- <div class="download-option">
@@ -150,14 +123,24 @@
     <!--* ========== Footer Section ========== -->
 
     <footer>
+        <p>Kontakt: <a href="mailto:wbsoft@web.de">wbsoft@web.de</a> | Tel: +49 176 5586 1387</p>
+        <p>General Inquiries: <a href="mailto:info@thatswe.com">info@thatswe.com</a> | Technical Support: <a href="mailto:support@thatswe.com">support@thatswe.com</a></p>
         <p>&copy; 2025 thatsWE UG - Wegner |
             <a href="impressum.html">Impressum</a> |
-            <a href="datenschutz.html">Datenschutz</a> |
+            <a href="privacy-policy.html">Datenschutz</a> |
             <a href="agb.html">AGB</a>
         </p>
-        <p>Kontakt: wbsoft@web.de | Tel: +49 176 5586 1387</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 </html>

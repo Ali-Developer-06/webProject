@@ -40,6 +40,8 @@
             email: form.querySelector('[name="email"]').value,
             website: form.querySelector('[name="website"]')?.value || '',
             message: form.querySelector('[name="message"]')?.value || '',
+            message: form.querySelector('[name="date"]')?.value || '',
+            message: form.querySelector('[name="ipaddress"]')?.value || '',
             app: appName
         };
         
