@@ -427,7 +427,11 @@ footer a:hover{
   margin-bottom: 3rem;
   color: var(--color-primary-600);
 }
+.imgCarouselPlusLicenceText{
+  display: flex;
+}
 .imgCarousel{
+  width: 50%;
   margin: 20px 0;
 }
 .swiper{
@@ -447,6 +451,13 @@ footer a:hover{
   height: 100%;
   display: block;
   object-fit: cover;
+}
+.licenceText{
+  width: 50%;
+  padding-top: 100px;
+}
+.licenceText li{
+  padding-top: 10px;
 }
 .download-option{
   display: flex;
@@ -518,6 +529,14 @@ footer a:hover{
   }
 }
 @media (max-width: 768px){
+  .imgCarouselPlusLicenceText{
+    flex-direction: column;
+  }
+  .licenceText,
+  .imgCarousel{
+    width: 90%;
+    padding: 10px 0;
+  }
   .cta-buttons{
     flex-direction: column;
   }
