@@ -204,7 +204,7 @@ img{
   display: flex;
   align-items: center;
 }
-.nav-item.dropdown .nav-link::after{
+/* .nav-item.dropdown .nav-link::after{
   content: '';
   width: 16px;
   height: 16px;
@@ -213,7 +213,7 @@ img{
 }
 .dropdown:hover .nav-link::after{
   transform: rotate(180deg);
-}
+} */
 /* .cta-system{
   padding: 10px;
   overflow: hidden;
@@ -338,6 +338,15 @@ img{
 .product-card:hover{
   transform: translateY(-5px);
 }
+.product-card h1{
+  font-size: 32px;
+  color: #3731BB;
+}
+.product-card p{
+  font-weight: 600;
+  color: #6583BC;
+  padding-top: 10px;
+}
 .product-logo{
   width: 80px;
   height: 80px;
@@ -387,7 +396,7 @@ img{
 
 footer{
   color: white;
-  padding: 5rem;
+  padding: 3rem;
   margin-top: 30px;
   background: #333;
   text-align: center;
@@ -427,36 +436,45 @@ footer a:hover{
   margin-bottom: 3rem;
   color: var(--color-primary-600);
 }
-.imgCarouselPlusLicenceText{
-  display: flex;
-}
-.imgCarousel{
-  width: 50%;
-  margin: 20px 0;
-}
-.swiper{
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide{
-  display: flex;
-  font-size: 18px;
+.innerProductSection h1{
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-neutral-100);
+  padding: 10px 0;
 }
-.swiper-slide img{
+.appContentPlusImages{
+  gap: 50px;
+  display: flex;
+  padding-top: 30px;
+}
+.appContent{
+  width: 30%;
+}
+.appContent h3{
+  cursor: pointer;
+  padding-top: 20px;
+}
+.appContent h3:hover{
+  color: var(--color-primary-600);
+}
+.appImages{
   width: 300px;
-  height: 100%;
+}
+.appImages img{
+  width: 100%;
+  display: none;
+  transition: opacity 0.4s ease-in-out;
+}
+.appImages img.active {
   display: block;
-  object-fit: cover;
 }
 .licenceText{
   width: 50%;
-  padding-top: 100px;
+  margin: 0 auto;
+  padding: 20px;
 }
-.licenceText li{
+.licenceText h1{
+  font-size: 28px;
+}
+.licenceText p{
   padding-top: 10px;
 }
 .download-option{
@@ -529,7 +547,14 @@ footer a:hover{
   }
 }
 @media (max-width: 768px){
-  .imgCarouselPlusLicenceText{
+  .appContentPlusImages{
+    align-items: center;
+    flex-direction: column;
+  }
+  .appContent{
+    width: 100%;
+    display: flex;
+    align-items:center;
     flex-direction: column;
   }
   .licenceText,
@@ -873,9 +898,8 @@ footer a:hover{
   font-size: 2.5rem;
   color: transparent;
   margin-bottom: 1rem;
-  background-color: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
-  -webkit-background-clip: text;
   background-clip: text;
+  color: var(--color-primary-600);
 }
 .contact-header p{
   margin: 0 auto;

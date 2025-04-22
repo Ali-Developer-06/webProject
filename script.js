@@ -49,3 +49,22 @@
         const queryString = new URLSearchParams(formData).toString();
         window.open(`pdf.html?${queryString}`, '_blank');
     }
+
+
+    //* Relevent picture opn on hover
+
+  const headings = document.querySelectorAll('.appContent h3');
+  const images = document.querySelectorAll('.appImages img');
+
+  headings.forEach(h3 => {
+    h3.addEventListener('mouseenter', () => {
+      const targetId = h3.getAttribute('data-target');
+
+      images.forEach(img => img.classList.remove('active'));
+
+      const targetImage = document.getElementById(targetId);
+      if (targetImage) {
+        targetImage.classList.add('active');
+      }
+    });
+  });

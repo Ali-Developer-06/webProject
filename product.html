@@ -22,16 +22,17 @@
             </a>
             <nav class="nav-system" id="mainNav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Start</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">über uns</a></li>
                     <li class="nav-item dropdown">
-                        <a href="product.html" class="nav-link">Products</a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a href="cashback.html" class="dropdown-item">CashBack</a></li> -->
+                        <a href="product.html" class="nav-link">unsere produkte</a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="cashback.html" class="dropdown-item">CashBack</a></li>
                             <li><a href="topTrip.html" class="dropdown-item">topTRIP</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">kontakt</a></li>
+                    <li class="nav-item"><a href="toptripform.html" class="nav-link">zur lizenz von topTRIP</a></li>
                 </ul>
             </nav>
             <button class="mobile-nav-toggle" aria-label="Toggle navigation">
@@ -39,67 +40,36 @@
             </button>
         </div>
     </header>
+
+    <!--* ========== Product Section ========== -->
+
     <section class="productSection">
-        <div class="products-grid">
-            <!-- <div class="product-card">
-                <a href="cashback.html">
-                    <img src="Assets/logo.png" alt="CashBack Logo" class="product-logo">
-                </a>
-                <div class="product-name">CashBack</div>
-                <div class="product-description">Lassen Sie sich überzahlte Zuzahlungen von Ihrer Krankenkasse erstatten.</div>
-                <a href="cashback.html" class="view-button">Mehr erfahren</a>
-            </div> -->
-            <div class="product-card">
-                <a href="topTrip.html">
-                    <img src="Assets/topTrip.png" alt="Product 2 Logo" class="product-logo">
-                </a>
-                <div class="product-name">topTRIP</div>
-                <div class="product-description">Nutzen Sie den digitalen Urlaubsbegleiter mit etlichen Spezial-Modulen.</div>
-                <a href="topTrip.html" class="view-button">Mehr erfahren</a>
-            </div>
-            <!-- <div class="product-card">
-                <a href="#">
-                    <img src="Assets/topTrip.png" alt="Product 3 Logo" class="product-logo">
-                </a>
-                <div class="product-name">IdeaApp2</div>
-                <div class="product-description">Nutzen Sie den digitalen Urlaubsbegleiter mit etlichen Spezial-Modulen.</div>
-                <a href="#" class="view-button">Mehr erfahren</a>
-            </div> -->
-        </div>
         <div class="innerProductSection">
-            <div class="imgCarouselPlusLicenceText">
-                <div class="imgCarousel">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="Assets/img1.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="Assets/img2.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="Assets/img3.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="Assets/img4.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="Assets/img5.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+            <h1>Seiten-Auswahl aus dem digitalen <br> Urlaubsbegleiter topTRIP</h1>
+            <div class="appContentPlusImages">
+                <div class="appContent">
+                    <h3 data-target="menu">01 Menu</h3>
+                    <h3 data-target="landesinfo">02 Landes-Info</h3>
+                    <h3 data-target="packliste">03 Packliste</h3>
+                    <h3 data-target="unterkunft">04 Unterkunft</h3>
+                    <h3 data-target="ortssuche">05 Ortssuche</h3>
                 </div>
-                <div class="licenceText">
-                    <h1>Licence Order</h1>
-                    <li>Lesen Sie bitte die Lizenzbedingungen. Sind Sie einverstanden</li>
-                    <li>Füllen Sie die Lizenznehmer-Daten komplett aus</li>
-                    <li>Sie Ihre Daten in Ordnung, drücken Sie den Button "Konvertierung"</li>
-                    <li>Die ausgefüllte Lizenzvereinbarung wird angezeigt.</li>
-                    <li>Button "Drucken" = die Lizenz-PDF wird gedruckt (eMail, Drucker etc)</li>
-                    <li>Mit dem Button "Lizenz bestellen" erfolgt der Auftrag zur Lizenz</li>
+                <div class="appImages">
+                    <img id="menu" src="Assets/01 Menu.jpg" alt="" class="active">
+                    <img id="landesinfo" src="Assets/02 Landes-Info.jpg" alt="">
+                    <img id="packliste" src="Assets/03 Packliste.jpg" alt="">
+                    <img id="unterkunft" src="Assets/04 Unterkunft.jpg" alt="">
+                    <img id="ortssuche" src="Assets/05 Ortssuche.jpg" alt="">
                 </div>
+            </div>
+            <div class="licenceText">
+                <h1>Der Weg zur Lizenz schrittweise erklärt</h1>
+                <p>1. Lesen Sie hier die Lizenzvereinbarung zur App "topTRIP"</p>
+                <p>2. Geben Sie Ihre Daten und Ihren Logo-Wunsch für Ihre App</p>
+                <p>3. Konvertieren Sie Ihre ausgefüllte Lizenzvereinbarung</p>
+                <p>4. Drucken Sie Ihre ausgefüllte Lizenzvereinbarung aus</p>
+                <p>5. Jetzt können Sie Ihre Lizenz-Bestellung per eMail abschicken</p>
+                <p>6. oder auf Ihrem Drucker ausdrücken und an den Lizenzgeber per Post verschicken: (thatsWE - Wegner, Bockhorner Weg 90, 28779 Bremen)</p>
             </div>
             <div class="section-container">
                 <h2 class="section-title">Download Options</h2>
@@ -134,13 +104,13 @@
     <!--* ========== Footer Section ========== -->
 
     <footer>
-        <p>Kontakt: <a href="mailto:wbsoft@web.de">wbsoft@web.de</a> | Tel: +49 176 5586 1387</p>
-        <p>General Inquiries: <a href="mailto:info@thatswe.com">info@thatswe.com</a> | Technical Support: <a href="mailto:support@thatswe.com">support@thatswe.com</a></p>
+        <!-- <p>General Inquiries: <a href="mailto:info@thatswe.com">info@thatswe.com</a> | Technical Support: <a href="mailto:support@thatswe.com">support@thatswe.com</a></p> -->
         <p>&copy; 2025 thatsWE UG - Wegner |
             <a href="impressum.html">Impressum</a> |
             <a href="privacy-policy.html">Datenschutz</a> |
             <a href="agb.html">AGB</a>
         </p>
+        <p>Kontakt: <a href="mailto:wbsoft@web.de">wbsoft@web.de</a> | Tel: +49 176 5586 1387</p>
     </footer>
 
     <script src="script.js"></script>
