@@ -1300,6 +1300,11 @@ h2{
 
 /** Privacy policy Page */
 
+.impressumPage{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 .privacyPolicyContent{
   width: 70%;
   margin: 170px auto 0;

@@ -53,40 +53,35 @@
 
     //* Relevent picture opn on hover
 
-  const headings = document.querySelectorAll('.appContent h3');
-  const images = document.querySelectorAll('.appImages img');
+    const headings = document.querySelectorAll('.appContent h3');
+    const images = document.querySelectorAll('.appImages img');
 
-  headings.forEach(h3 => {
-    h3.addEventListener('mouseenter', () => {
-      const targetId = h3.getAttribute('data-target');
-
-      images.forEach(img => img.classList.remove('active'));
-
-      const targetImage = document.getElementById(targetId);
-      if (targetImage) {
+    headings.forEach(h3 => {
+        h3.addEventListener('mouseenter', () => {
+        const targetId = h3.getAttribute('data-target');
+        images.forEach(img => img.classList.remove('active'));
+        const targetImage = document.getElementById(targetId);
+        if (targetImage) {
         targetImage.classList.add('active');
-      }
+        }
     });
-  });
+});
 
 
   //* PDF upload manually
-  
-  let selectedFile = null;
+
+    let selectedFile = null;
 
 document.getElementById('actionBtn').addEventListener('click', function() {
     if (!selectedFile) {
-        // پہلی بار: PDF سلیکٹ کریں
         document.getElementById('pdfInput').click();
     } else {
-        // دوسری بار: Submit کریں
         uploadPDF(selectedFile);
     }
 });
 
 document.getElementById('pdfInput').addEventListener('change', function(e) {
     selectedFile = e.target.files[0];
-    
     if (selectedFile && selectedFile.type === "application/pdf") {
         document.getElementById('actionBtn').textContent = "Submit PDF";
     } else {
