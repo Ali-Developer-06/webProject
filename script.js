@@ -1,12 +1,12 @@
     //* Interactive hover effect for product cards
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('mouseover', () => {
-        card.style.transform = 'scale(1.05)';
-    });
-        card.addEventListener('mouseout', () => {
-        card.style.transform = 'scale(1)';
-        });
-    });
+    // document.querySelectorAll('.product-card').forEach(card => {
+    //     card.addEventListener('mouseover', () => {
+    //     card.style.transform = 'scale(1.05)';
+    // });
+    //     card.addEventListener('mouseout', () => {
+    //     card.style.transform = 'scale(1)';
+    //     });
+    // });
 
   //* Hamburger script 
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
@@ -68,3 +68,34 @@
       }
     });
   });
+
+
+  //* PDF upload manually
+  
+  let selectedFile = null;
+
+document.getElementById('actionBtn').addEventListener('click', function() {
+    if (!selectedFile) {
+        // پہلی بار: PDF سلیکٹ کریں
+        document.getElementById('pdfInput').click();
+    } else {
+        // دوسری بار: Submit کریں
+        uploadPDF(selectedFile);
+    }
+});
+
+document.getElementById('pdfInput').addEventListener('change', function(e) {
+    selectedFile = e.target.files[0];
+    
+    if (selectedFile && selectedFile.type === "application/pdf") {
+        document.getElementById('actionBtn').textContent = "Submit PDF";
+    } else {
+        selectedFile = null;
+    }
+});
+
+function uploadPDF(file) {
+    alert("PDF Uploaded Successfully!");
+    selectedFile = null;
+    document.getElementById('actionBtn').textContent = "Select PDF";
+}

@@ -295,7 +295,7 @@ img{
 /** ========== Product Section ==========  */
 
 .productSection{
-  padding: 160px 40px 0;
+  padding: 160px 0 0;
 }
 .company-header{
   display: flex;
@@ -322,21 +322,12 @@ img{
 .company-description a{
   margin-top: 20px;
 }
-.products-grid{
-  gap: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
 .product-card{
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   background-color: var(--color-neutral-100);
-}
-.product-card:hover{
-  transform: translateY(-5px);
 }
 .product-card h1{
   font-size: 32px;
@@ -396,8 +387,8 @@ img{
 
 footer{
   color: white;
-  padding: 3rem;
-  margin-top: 30px;
+  padding: 1.95rem;
+  /* margin-top: 30px; */
   background: #333;
   text-align: center;
 }
@@ -443,7 +434,7 @@ footer a:hover{
 .appContentPlusImages{
   gap: 50px;
   display: flex;
-  padding-top: 30px;
+  padding: 30px;
 }
 .appContent{
   width: 30%;
@@ -576,12 +567,14 @@ footer a:hover{
 .productPageContent{
   width: 70%;
   margin: 0 auto;
-  padding: 170px 0 0;
+  padding: 150px 0 20px;
 }
 .productPageContent h2{
-  padding: 15px 0;
+  font-size: 20px;
+  padding: 5px 0;
 }
 .productPageContent li{
+  font-size: 14px;
   padding-left: 25px;
 }
 
@@ -906,14 +899,14 @@ footer a:hover{
   max-width: 600px;
   color: var(--color-neutral-400);
 }
-.contact-grid{
+.contactGridPlusForm{
+  gap: 50px;
   display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
-  justify-content: center;
+}
+.contact-grid{
+  width: 30%;
 }
 .contact-card{
-  width: 40%;
   padding: 2rem;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -954,9 +947,9 @@ footer a:hover{
     color: var(--color-primary-500);
 }
 .contact-form-container{
-  padding: 2rem;
+  width: 70%;
+  padding: 1rem;
   border-radius: 12px;
-  margin-bottom: 3rem;
   background-color: var(--color-neutral-100);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -970,11 +963,9 @@ footer a:hover{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.form-group{
-  margin-bottom: 1.5rem;
-}
-.form-group.full-width{
-  grid-column: 1 / -1;
+.form-group textarea{
+  width: 100% !important;
+  height: 40px !important;
 }
 .form-label{
   display: block;
@@ -994,17 +985,15 @@ footer a:hover{
   border-color: var(--color-primary-500);
   box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
 }
-textarea.form-control{
-  resize: vertical;
-  min-height: 150px;
-}
 .btn{
+  width: 100%;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
+  margin-top: 30px;
   border-radius: 8px;
-  padding: 0.9rem 2rem;
+  padding: 0.7rem 2rem;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
@@ -1034,87 +1023,6 @@ textarea.form-control{
   .contact-form-container{
     padding: 15px !important;
   }
-}
-
-
-/** Website Loader styling */
-
-
-.loader-container{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--color-neutral-100);
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-.loader-spinner{
-  width: 64px;
-  height: 64px;
-  position: relative;
-}
-.loader-spinner::before,
-.loader-spinner::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  border: 4px solid transparent;
-  animation: loader-spin 1.5s linear infinite;
-}
-.loader-spinner::before{
-  animation-delay: 0.25s;
-  border-top-color: var(--color-primary-500);
-  border-bottom-color: var(--color-primary-500);
-}
-.loader-spinner::after{
-  border-left-color: var(--color-accent-400);
-  border-right-color: var(--color-accent-400);
-}
-.loader-text{
-  font-size: 1rem;
-  margin-top: 24px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-neutral-900);
-  animation: loader-pulse 1.5s ease-in-out infinite;
-}
-@keyframes loader-spin{
-  0%{
-    transform: rotate(0deg); 
-  }
-  100%{
-    transform: rotate(360deg); 
-  }
-}
-@keyframes loader-pulse{
-  0%, 100%{
-    opacity: 1; 
-  }
-  50%{
-    opacity: 0.5; 
-  }
-}
-.loader-container.hidden{
-  opacity: 0;
-  visibility: hidden;
-}
-.page-content{
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-.page-content.loaded{
-  opacity: 1;
 }
 
 
@@ -1201,6 +1109,9 @@ h2{
 .licenceFormPlusContent .licence-Content{
   width: 50%;
 }
+.licence-Content p{
+  font-size: 13px;
+}
 .thatsWEContactForm{
   padding: 10px 20px;
   border-radius: 8px;
@@ -1226,7 +1137,12 @@ h2{
 .form-group textarea{
   height: 100px;
 }
-.submit-btn{
+.formBtnPlusPDFBtn{
+  gap: 30px;
+  display: flex;
+}
+.form-group .btn{
+  margin: 0;
   width: 100%;
   border: none;
   font-size: 1em;
@@ -1235,12 +1151,29 @@ h2{
   border-radius: 4px;
   color: var(--color-neutral-100);
   transition: background-color 0.3s;
-  background-color: var(--color-primary-600);
-}
-.submit-btn:hover{
   background-color: var(--color-primary-500);
 }
-
+.submit-btn:hover{
+  background-color: var(--color-primary-600);
+}
+.pdfUploadContainer{
+  width: 50%;
+}
+.pdfUploadContainer button#actionBtn{
+  width: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 12px 24px;
+  transition: background 0.3s;
+  background-color: var(--color-primary-500);
+}
+.pdfUploadContainer button#actionBtn:hover{
+  background-color: var(--color-primary-600);
+}
 @media (max-width:768px){
   .thatsWEPage{
     padding: 150px 15px 0;
@@ -1266,6 +1199,7 @@ h2{
 
 .pdfContent{
   padding: 10px;
+  margin: 20px;
   text-align: center;
   border: 3px solid black;
 }
