@@ -75,18 +75,6 @@
             <p>Die Lizenz gilt jeweils bis zum 31.12. des lfd. Kalenderjahres. Sie verlängert sich automatisch um ein weiteres Kalenderjahr. Die Lizenz kann durch einfache schriftliche Erklärung (auch eMail an wbsoft@web.de) des Lizenznehmers miteiner Frist von 14 Tagen vor Ablauf des laufenden Kalenderjahres gekündigt werden.</p>
             <h5>7. Schlussbestimmungen</h5>
             <p>Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Der Lizenzvertrag kommt mit dem Versand per Mail unter Einbeziehung der in dem Lizenz-Bestell-Formular automatisch eingetragenen „IP-Adresse“ zustande. Konnte keine IP-Adresse ermittelt werden, erfolgt der Versand dieser Lizenzvereinbarung durch den Lizenznehmer per Fax/Post mit rechtsverbindlicher Unterschrift. </p>
-            <div class="pdfFormData lastPdfForm">
-                <div class="formGroups">
-                    <div class="formGroup">
-                        <p>Datum:</p>
-                        <p id="datePDF"></p>
-                    </div>
-                    <div class="formGroup">
-                        <p>IP:</p>
-                        <p id="ipPDF"></p>
-                    </div>
-                </div>
-            </div>
         </div>  
     </div>
 
@@ -101,8 +89,6 @@
             document.getElementById('telephonePDF').textContent = urlParams.get('telephone') || '';
             document.getElementById('emailPDF').textContent = urlParams.get('email') || '';
             document.getElementById('wwwPDF').textContent = urlParams.get('website') || '';
-            document.getElementById('datePDF').textContent = urlParams.get('date') || '';
-            document.getElementById('ipPDF').textContent = urlParams.get('ipaddress') || '';
 
             const appName = urlParams.get('app') || 'topTRIP';
             const filename = `${appName}_licence.pdf`;

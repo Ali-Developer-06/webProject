@@ -1,55 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="Assets/topTrip.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Popup Styles */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none; /* Initially hidden */
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-#gmailBtn{
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-    background: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-}
-#gmailBtn img{
-    width: 50px;
-    height: 50px;
-}
-
-    </style>
     <title>topTRIP | Form</title>
 </head>
 <body>
@@ -119,20 +75,12 @@
                         <label for="website" class="form-label">Website</label>
                         <input type="text" id="website" name="website" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label for="date" class="form-label">date</label>
-                        <input type="date" id="date" name="date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="ipaddress" class="form-label">IP Adddress</label>
-                        <input type="text" id="ipaddress" name="ipaddress" class="form-control">
-                    </div>
                     <div class="form-group full-width">
                         <label for="message" class="form-label">Ihre Nachricht</label>
                         <textarea id="message" name="message" class="form-control"></textarea>
                     </div>
                     <div class="form-group full-width" style="text-align: center;">
-                        <button type="submit" class="btn">Generate License PDF</button>
+                        <button type="submit" class="btn" onclick="generatePDFAndRedirect()">Generate License PDF</button>
                     </div>
                 </form>
                 <div class="licence-Content">
@@ -184,17 +132,6 @@
             </div>
         </div>
     </section>
-    <!-- Popup for sharing options -->
-    <div id="sharePopup" class="popup" style="display: none;">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h3>Share Your License</h3>
-            <button id="gmailBtn">
-                <img src="Assets/gmail.png" alt="">
-            </button>
-            <p>Gmail</p>
-        </div>
-    </div>
 
 
     <!--* ========== Footer Section ========== -->
@@ -209,26 +146,7 @@
         <p>Kontakt: <a href="mailto:wbsoft@web.de">wbsoft@web.de</a> | Tel: +49 176 5586 1387</p>
     </footer>
 
-    <script>
-        function showPopup() {
-            document.getElementById('sharePopup').style.display = 'block';
-        }
-        function closePopup() {
-            document.getElementById('sharePopup').style.display = 'none';
-        }
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.open('toptrippdf.html?' + new URLSearchParams(new FormData(this)).toString(), '_blank');
-            showPopup();
-        });
-        document.getElementById('gmailBtn').addEventListener('click', function() {
-            const email = 'wbsoft@web.de';
-            const subject = 'Your License PDF';
-            const body = 'Here is your License PDF.';
-            window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            closePopup();
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
