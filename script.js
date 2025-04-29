@@ -51,46 +51,30 @@
     }
 
 
-    //* Relevent picture opn on hover
+    //* Img Carousel
 
-    const headings = document.querySelectorAll('.appContent h3');
-    const images = document.querySelectorAll('.appImages img');
-
-    headings.forEach(h3 => {
-        h3.addEventListener('mouseenter', () => {
-        const targetId = h3.getAttribute('data-target');
-        images.forEach(img => img.classList.remove('active'));
-        const targetImage = document.getElementById(targetId);
-        if (targetImage) {
-        targetImage.classList.add('active');
+        const carouselImages = document.querySelector('.carousel-images');
+        const carImages = document.querySelectorAll('.carousel-images img');
+        const leftBtn = document.querySelector('.left-btn');
+        const rightBtn = document.querySelector('.right-btn');
+        const heading = document.getElementById('carouselHeading');
+        const carHeadings = [
+            'Menu',
+            'Landes-Info',
+            'Packliste',
+            'Unterkunft',
+            'Ortssuche'
+        ];
+        let index = 0;
+        function showImage() {
+            carouselImages.style.transform = `translateX(${-index * 250}px)`;
+            heading.textContent = carHeadings[index];
         }
-    });
-});
-
-
-  //* PDF upload manually
-
-    let selectedFile = null;
-
-document.getElementById('actionBtn').addEventListener('click', function() {
-    if (!selectedFile) {
-        document.getElementById('pdfInput').click();
-    } else {
-        uploadPDF(selectedFile);
-    }
-});
-
-document.getElementById('pdfInput').addEventListener('change', function(e) {
-    selectedFile = e.target.files[0];
-    if (selectedFile && selectedFile.type === "application/pdf") {
-        document.getElementById('actionBtn').textContent = "Submit PDF";
-    } else {
-        selectedFile = null;
-    }
-});
-
-function uploadPDF(file) {
-    alert("PDF Uploaded Successfully!");
-    selectedFile = null;
-    document.getElementById('actionBtn').textContent = "Select PDF";
-}
+        leftBtn.addEventListener('click', () => {
+            index = (index - 1 + carImages.length) % carImages.length;
+            showImage();
+        });
+        rightBtn.addEventListener('click', () => {
+            index = (index + 1) % carImages.length;
+            showImage();
+        });

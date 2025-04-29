@@ -7,9 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Popup Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+#gmailBtn{
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    background: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+#gmailBtn img{
+    width: 50px;
+    height: 50px;
+}
+
+    </style>
     <title>topTRIP | Form</title>
 </head>
-
 <body>
     <!--* ========== Header ========== -->
 
@@ -46,11 +88,9 @@
 
     <section class="licenceForm">
         <div class="thatsWEContactForm">
-            <h2>Lizenz für App Two</h2>
+            <h2>Lizenz bestellen</h2>
             <div class="licenceFormPlusContent">
-                <form
-                    onsubmit="window.open('toptrippdf.html?'+new URLSearchParams(new FormData(this)).toString(), '_blank'); return false;"
-                    class="contact-form">
+                <form onsubmit="window.open('toptrippdf.html?'+new URLSearchParams(new FormData(this)).toString(), '_blank'); return false;" class="contact-form">
                     <div class="form-group">
                         <label for="name" class="form-label">Firmenname</label>
                         <input type="text" id="name" name="name" class="form-control" required>
@@ -91,14 +131,8 @@
                         <label for="message" class="form-label">Ihre Nachricht</label>
                         <textarea id="message" name="message" class="form-control"></textarea>
                     </div>
-                    <div class="formBtnPlusPDFBtn">
-                        <div class="form-group full-width" style="text-align: center;">
-                            <button type="submit" class="btn">Generate License PDF</button>
-                        </div>
-                        <div class="pdfUploadContainer">
-                            <button id="actionBtn">Select PDF</button>
-                            <input type="file" id="pdfInput" accept=".pdf" hidden>
-                        </div>
+                    <div class="form-group full-width" style="text-align: center;">
+                        <button type="submit" class="btn">Generate License PDF</button>
                     </div>
                 </form>
                 <div class="licence-Content">
@@ -146,17 +180,22 @@
                         Lizenz-Bestell-Formular automatisch eingetragenen „IP-Adresse“ zustande. Konnte keine IP-Adresse
                         ermittelt werden, erfolgt der Versand dieser Lizenzvereinbarung durch den Lizenznehmer per
                         Fax/Post mit rechtsverbindlicher Unterschrift. </p>
-                    <h5 style="padding-top: 10px;">Der Weg zur Lizenz schrittweise erklärt</h5>
-                    <p>1. Lesen Sie hier die Lizenzvereinbarung zur App "topTRIP"</p>
-                    <p>2. Geben Sie Ihre Daten und Ihren Logo-Wunsch für Ihre App</p>
-                    <p>3. Konvertieren Sie Ihre ausgefüllte Lizenzvereinbarung</p>
-                    <p>4. Drucken Sie Ihre ausgefüllte Lizenzvereinbarung aus</p>
-                    <p>5. Jetzt können Sie Ihre Lizenz-Bestellung per eMail abschicken</p>
-                    <p>6. oder auf Ihrem Drucker ausdrücken und an den Lizenzgeber per Post verschicken: (thatsWE - Wegner, Bockhorner Weg 90, 28779 Bremen)</p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Popup for sharing options -->
+    <div id="sharePopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3>Share Your License</h3>
+            <button id="gmailBtn">
+                <img src="Assets/gmail.png" alt="">
+            </button>
+            <p>Gmail</p>
+        </div>
+    </div>
+
 
     <!--* ========== Footer Section ========== -->
 
@@ -170,28 +209,26 @@
         <p>Kontakt: <a href="mailto:wbsoft@web.de">wbsoft@web.de</a> | Tel: +49 176 5586 1387</p>
     </footer>
 
-    <script src="script.js"></script>
     <script>
-        document.getElementById('uploadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const fileInput = document.getElementById('pdfFile');
-    const message = document.getElementById('message');
-    
-    if (fileInput.files.length > 0) {
-        const file = fileInput.files[0];
-        if (file.type === "application/pdf") {
-            // یہاں آپ سرور پر اپ لوڈ کا کوڈ شامل کریں (مثلاً Firebase یا Node.js)
-            message.textContent = `PDF Uploaded Successfully: ${file.name}`;
-            message.style.color = "green";
-        } else {
-            message.textContent = "Please upload a valid PDF file!";
-            message.style.color = "red";
+        function showPopup() {
+            document.getElementById('sharePopup').style.display = 'block';
         }
-    } else {
-        message.textContent = "No file selected!";
-        message.style.color = "red";
-    }
-});
+        function closePopup() {
+            document.getElementById('sharePopup').style.display = 'none';
+        }
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.open('toptrippdf.html?' + new URLSearchParams(new FormData(this)).toString(), '_blank');
+            showPopup();
+        });
+        document.getElementById('gmailBtn').addEventListener('click', function() {
+            const email = 'wbsoft@web.de';
+            const subject = 'Your License PDF';
+            const body = 'Here is your License PDF.';
+            window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            closePopup();
+        });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
