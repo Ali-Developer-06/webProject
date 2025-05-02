@@ -46,43 +46,6 @@
         <div class="thatsWEContactForm">
             <h2>Lizenz bestellen</h2>
             <div class="licenceFormPlusContent">
-                <form onsubmit="window.open('toptrippdf.html?'+new URLSearchParams(new FormData(this)).toString(), '_blank'); return false;" class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Firmenname</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="owner" class="form-label">Inhaber</label>
-                        <input type="text" id="owner" name="owner" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="street" class="form-label">Straße</label>
-                        <input type="text" id="street" name="street" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="postal" class="form-label">PLZ / Ort</label>
-                        <input type="text" id="postal" name="postal" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telephone" class="form-label">Telefon</label>
-                        <input type="tel" id="telephone" name="telephone" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">eMail</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="website" class="form-label">Website</label>
-                        <input type="text" id="website" name="website" class="form-control">
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message" class="form-label">Ihre Nachricht</label>
-                        <textarea id="message" name="message" class="form-control"></textarea>
-                    </div>
-                    <div class="form-group full-width" style="text-align: center;">
-                        <button type="submit" class="btn" onclick="generatePDFAndRedirect()">Generate License PDF</button>
-                    </div>
-                </form>
                 <div class="licence-Content">
                     <p>nachfolgend „Lizenznehmer“ genannt, wird folgende Vereinbarung getroffen:</p>
                     <h5>1. Gegenstand der Vereinbarung</h5>
@@ -129,6 +92,43 @@
                         ermittelt werden, erfolgt der Versand dieser Lizenzvereinbarung durch den Lizenznehmer per
                         Fax/Post mit rechtsverbindlicher Unterschrift. </p>
                 </div>
+                <form onsubmit="window.open('toptrippdf.html?'+new URLSearchParams(new FormData(this)).toString(), '_blank'); return false;" class="licence-contact-form">
+                    <div class="form-group">
+                        <!-- <label for="name" class="form-label">Firmenname</label> -->
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Firmenname" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="owner" class="form-label">Inhaber</label> -->
+                        <input type="text" id="owner" name="owner" class="form-control" placeholder="Inhaber" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="street" class="form-label">Straße</label> -->
+                        <input type="text" id="street" name="street" class="form-control" placeholder="Straße" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="postal" class="form-label">PLZ / Ort</label> -->
+                        <input type="text" id="postal" name="postal" class="form-control" placeholder="PLZ / Ort" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="telephone" class="form-label">Telefon</label> -->
+                        <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Telefon" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="email" class="form-label">eMail</label> -->
+                        <input type="email" id="email" name="email" class="form-control" placeholder="eMail" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="website" class="form-label">Website</label> -->
+                        <input type="text" id="website" name="website" class="form-control" placeholder="Website">
+                    </div>
+                    <div class="form-group full-width">
+                        <!-- <label for="message" class="form-label">Ihre Nachricht</label> -->
+                        <textarea id="message" name="message" class="form-control" placeholder="Ihre Nachricht"></textarea>
+                    </div>
+                    <div class="form-group full-width" style="text-align: center;">
+                        <button type="submit" class="btn" onclick="generatePDFAndRedirect()">Generate License PDF</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
