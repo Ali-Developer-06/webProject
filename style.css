@@ -1040,6 +1040,13 @@ footer a:hover{
   .contact-card{
     width: 100%;
   }
+  .contactGridPlusForm{
+    flex-direction: column;
+  }
+  .contactGridPlusForm .contact-grid,
+  .contactGridPlusForm .contact-form-container{
+    width: 100%;
+  }
   .contact-form{
     grid-template-columns: 1fr;
   }
@@ -1142,9 +1149,19 @@ h2{
   margin: 0 auto;
 }
 .licence-contact-form{
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding-top: 20px;
+}
+.licence-contact-form .form-group{
+  display: flex;
+}
+.licence-contact-form .form-group label{
+  width: 30%;
+}
+.licence-contact-form .form-group input,
+.licence-contact-form .form-group textarea{
+  width: 70% !important;
 }
 .form-group{
   margin-bottom: 15px;
