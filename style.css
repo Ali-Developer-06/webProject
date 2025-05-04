@@ -59,7 +59,7 @@ img{
 .header__container{
   display: flex;
   margin: 0 auto;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   padding: 1rem 0 0;
   align-items: center;
   flex-direction: column;
@@ -432,6 +432,7 @@ footer a:hover{
 }
 .innerProductSection h1{
   padding: 10px 0;
+  font-size: 20px;
   text-align: center;
 }
 .carousel{
@@ -971,6 +972,7 @@ footer a:hover{
 }
 .contact-form-container{
   width: 70%;
+  margin: 0 auto;
   padding: 1rem;
   border-radius: 12px;
   background-color: var(--color-neutral-100);
@@ -986,9 +988,8 @@ footer a:hover{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.form-group textarea{
+.contactGridPlusForm .form-group textarea{
   width: 100% !important;
-  height: 40px !important;
 }
 .form-label{
   display: block;
@@ -1008,7 +1009,10 @@ footer a:hover{
   border-color: var(--color-primary-500);
   box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
 }
-.btn{
+.contactGridPlusForm .full-width{
+  margin: 0;
+}
+.contactGridPlusForm .btn{
   width: 100%;
   border: none;
   font-size: 1rem;
@@ -1023,7 +1027,7 @@ footer a:hover{
   color: var(--color-neutral-100);
   background-color: var(--color-primary-500);
   }
-.btn:hover{
+.contactGridPlusForm .btn:hover{
   transform: translateY(-2px);
   background-color: var(--color-primary-600);
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
