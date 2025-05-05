@@ -388,7 +388,6 @@ img{
 footer{
   color: white;
   padding: 1.95rem;
-  /* margin-top: 30px; */
   background: #333;
   text-align: center;
 }
@@ -1166,6 +1165,18 @@ h2{
 .licence-contact-form .form-group input,
 .licence-contact-form .form-group textarea{
   width: 70% !important;
+}
+.goToFormBtn{
+  text-align: center;
+  margin-top: 20px;
+}
+.goToFormBtn button{
+  padding: 15px 30px;
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-500);
+}
+.goToFormBtn button:hover{
+  background-color: var(--color-primary-600);
 }
 .form-group{
   margin-bottom: 15px;
